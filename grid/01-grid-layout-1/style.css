@@ -8,6 +8,13 @@ body, html {
   height: 100%;
   padding: 16px;
   box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+  grid-template-areas: "head head head head head"
+                      "side nav nav nav nav"
+                      "side article article article article"
+                      "foot foot foot foot foot";
+  grid-gap: 5px;
 }
 
 .container div {
@@ -21,18 +28,22 @@ body, html {
 
 .header {
   background-color: #FFDE22;
+  grid-area: head;
 }
 
 .sidebar {
   background-color: #FF7755;
+  grid-area: side;
 }
 
 .nav {
   background-color: #00DDFF;
+  grid-area: nav;
 }
 
 .article {
   background-color: #bccbde;
+  grid-area: article;
 }
 
 .article p {
@@ -44,4 +55,5 @@ body, html {
 
 .footer {
   background-color: #393f4d;
+  grid-area: foot;
 }
